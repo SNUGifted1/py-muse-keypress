@@ -1,2 +1,3 @@
-# py-muse-keypress
-Key Presser using brainwave
+## py-muse-keypress
+# Unique gaming experience with using your brainwave
+Or, use your own risk.
