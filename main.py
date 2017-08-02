@@ -4,24 +4,24 @@ import keymodule
 
 from pythonosc import dispatcher
 from pythonosc import osc_server
-    
-click =0
+
+click = 0
 
 
 def eeg_handler1(unused_addr, args, ch1):
     print("Blink: ", ch1)
-    PressKey(VK_SPACE)
-    ReleaseKey(VK_SPACE)
+    keymodule.PressKey(VK_SPACE)
+    keymodule.ReleaseKey(VK_SPACE)
     
 def eeg_handler2(unused_addr, args, ch1):
     print("Jaw Clench: ", ch1)
     global click
     if(click==0):
         click=1
-        ReleaseKey(VK_SPACE)
+        keymodule.ReleaseKey(VK_SPACE)
     else:
         click=0
-        PressKey(VK_SPACE)
+        keymodule.PressKey(VK_SPACE)
            
 if __name__ == "__main__":
     
